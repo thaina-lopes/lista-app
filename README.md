@@ -1,4 +1,4 @@
-# Todo App
+# Lista App
 
 ## Funcionalidades:
 
