@@ -1,6 +1,6 @@
 # Lista App
 
-> Em desenvolvimento
+> :construction: Em desenvolvimento :construction:
 > 
 ## Funcionalidades:
 
