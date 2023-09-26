@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [lista, setLista] = useState([
+    "criar a listagens de todos",
+    "blablabla",
+  ]);
+
+  const [novoItem, setNovoItem] = useState("");
+
+  const adicionarNaLista = (item) => {
+    setLista([...lista, item]);
+    setNovoItem("");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Lista App</h1>
+      <ul>
+        {lista.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+
+      <input
+        type="text"
+        value={novoItem}
+        onChange={(event) => setNovoItem(event.target.value)}
+      />
+
+      <button onClick={() => adicionarNaLista(novoItem)}>Adicionar</button>
     </div>
   );
 }
