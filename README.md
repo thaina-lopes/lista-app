@@ -1,5 +1,7 @@
 # Lista App
 
+> Em desenvolvimento
+> 
 ## Funcionalidades:
 
 - Listagem de itens [x]
