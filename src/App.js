@@ -13,12 +13,23 @@ function App() {
     setNovoItem("");
   };
 
+  const removeDaLista = (item) => {
+    const novaListaSemItemRemovido = lista.filter(
+      (itemDaLista) => itemDaLista !== item
+    );
+
+    setLista(novaListaSemItemRemovido);
+  };
+
   return (
     <div>
       <h1>Lista App</h1>
       <ul>
         {lista.map((item) => (
-          <li key={item}>{item}</li>
+          <div key={item}>
+            <li>{item}</li>
+            <button onClick={() => removeDaLista(item)}>Excluir</button>
+          </div>
         ))}
       </ul>
 
